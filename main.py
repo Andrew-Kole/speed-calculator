@@ -42,8 +42,8 @@ class SpeedCalculator(QWidget):
         if self.distance_combo_box.currentText() == "Metric: (km)":
             self.output_label.setText(f"Average speed is {average} km/h")
         elif self.distance_combo_box.currentText() == "Imperial: (miles)":
+            average = average * 0.621371
             self.output_label.setText(f"Average speed is {average} miles/h")
-
 
 
 app = QApplication(sys.argv)
